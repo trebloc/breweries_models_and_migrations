@@ -1,4 +1,4 @@
-# Active Record Migrations and Associations Lab
+# Active Record Migrations and Associations Lab - Backend Breweries
 
 We're going to build a beer app.  
 
@@ -266,9 +266,16 @@ Since we now have a separate model for the brewer we no longer need a column on 
 `rails g migration RemoveBrewerNameFromBeer brewery_name:string`
 </details>
 
-## Challenges
+## More
 
-1. Add more columns to both `Brewer` and `Beer`.
+On your own do the following:
+
+1. Add more columns to `Brewer` like `year_founded`, `phone`, `latitude`, `longitude`, `image_url`
+1. Add more columns to `Beer` like `ibu` (international bittering unit), `seasonal` (true/false) etc
 1. Create a new model Review to track reviews for each Beer.
-  * Associate this table with the Beer table.  
+  * Associate this table with the Beer table.
+  * Add a few fake reviews.
+
+## Advanced Challenges
+1. Delete this app and start over; re-build it from scratch.
 1. Create controllers and at least one view to show the above data.
