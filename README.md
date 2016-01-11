@@ -10,7 +10,7 @@ This lab will force you to write and run several migrations so you get experienc
 | Add columns to the database using database migrations |
 | Remove columns from the database using migrations |
 | Create associations between two models |
-| Modify migrations to add foreign keys to tables |
+| Write a migration to add foreign keys to tables |
 
 ## Introduction
 
@@ -258,7 +258,7 @@ irb(main):005:0> Brewer.last.beers.count
 => 1
 ```
 
-## Step 5 - remove the brewer_name column
+## Step 5 - remove the brewery_name column
 
 Since we now have a separate model for the brewer we no longer need a column on the beers table to list the brewery_name.
 
