@@ -15,13 +15,14 @@ This lab will force you to write and run several migrations so you get experienc
 ## Introduction
 
 Our system is going to track two types of data.
+
 1. breweries
 2. beers (varieties of beers)
 
 This means we'll have two models and a relationship between them.  We'll determine specific column names as we move forward.
 
 ### Committing
-Every time you make a change that could be atomic, commit your changes.  We should be able to see at least 1 commit for each step in the lab.
+Every time you make a change that is atomic, commit your changes.  We should be able to see **at least 1 commit for each step in the lab**.
 
 ## Step 1 - The first model
 
@@ -199,7 +200,8 @@ Please complete the following using ActiveRecord terminology.
 * Which table will contain the **foreign key**?
 
 <details><summary>solution</summary>
-| A brewer **has_many** beers. |
+|
+ A brewer **has_many** beers. |
 | A beer **belongs_to** a brewer. |
 
 * The beers table will contain a foreign key to tie it to each brewer.
@@ -209,11 +211,13 @@ Please complete the following using ActiveRecord terminology.
 
 
 Do the following:
+
 1. Write and run a migration to add the foreign_key
  * Don't forget about using `references` or `belongs_to`
 1. Update the rails model files to specify the relationship between beer and brewer.
 
 <details><summary>spoiler</summary>
+
 `rails g migration AddBrewerReferenceToBeer brewer:references`
 
 Isn't this nice:
@@ -224,6 +228,7 @@ class AddBrewerReferenceToBeer < ActiveRecord::Migration
   end
 end
 ```
+
 </details>
 
 > did you commit?  The migration, schema.rb and the two models should all be in one commit.  They require each other to continue working.
