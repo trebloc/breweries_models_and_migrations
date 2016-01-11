@@ -187,6 +187,8 @@ As you can imagine most brewers produce more than one variety of beer.  Also we 
 
 That means we have a 1:N relationship.
 
+***Quick quiz***
+
 Please complete the following using ActiveRecord terminology.
 
 | Fill in the blank |
@@ -197,13 +199,14 @@ Please complete the following using ActiveRecord terminology.
 * Which table will contain the **foreign key**?
 
 <details><summary>solution</summary>
-| Fill in the blank |
-| :--- |
 | A brewer **has_many** beers. |
 | A beer **belongs_to** a brewer. |
 
 * The beers table will contain a foreign key to tie it to each brewer.
 </details>
+
+---
+
 
 Do the following:
 1. Write and run a migration to add the foreign_key
